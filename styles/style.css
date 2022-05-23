@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lilita One', sans-serif;
+  background-color: #dbe2e4;
+}
+
+#jogo {
+  font-family: 'Patrick Hand', sans-serif;
+  padding: 15px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #110629;
+  color: white;
+}
+
+#gameBoard {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50rem;
+
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.card {
+  margin: 10px;
+  width: 125px;
+  height: 125px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  flex-direction: row;
+  border-color: crimson;
+}
+
+.card_back,
+.card_front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.card_front {
+  transform: rotateY(180deg);
+  background-color: #101c2c;
+  
+}
+
+.card_back {
+  color: #101c2c;
+  background-color: #05c3ff;
+  background-color: #fdc200;
+  font-size: 30px;
+  background-image: url("https://img.icons8.com/external-tal-revivo-color-tal-revivo/344/external-question-mark-for-the-help-and-queries-outdoor-color-tal-revivo.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icons {
+  display: flex;
+  position: absolute;
+  gap: 1rem;
+  width: 20px;
+  right: 15rem;
+  top: -5px;
+}
+
+.img {
+  width: 2rem;
+  color: #dbe2e4;
+  transition: 0.1s;
+  display: flex;
+  position: relative;
+}
+
+.img:hover {
+  padding: 1.8px;
+
+  position: relative;
+  transition: 0.15s;
+}
+
+#gameOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+}
+
+#restart {
+  padding: 20px;
+  font-size: 20px;
+  background-color: yellow;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+img {
+  height: 80px;
+}
+
+footer {
+  display: none;
+}
+
+/* Responsividade Mobile*/
+@media (max-width: 800px) {
+  .card {
+    width: 70px;
+    height: 70px;
+  }
+
+  #gameBoard {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px;
+
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  img {
+    height: 45px;
+  }
+
+  .card_back,
+  .card_front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+  }
+
+  .card_back{
+    background-image: url("https://img.icons8.com/external-tal-revivo-color-tal-revivo/344/external-question-mark-for-the-help-and-queries-outdoor-color-tal-revivo.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+
+  .img {
+    text-align: center;
+    top: 41.5em;
+    width: 1.5rem;
+    color: #dbe2e4;
+    transition: 0.1s;
+    display: none;
+    position: relative;
+  }
+
+  .icons {
+    display: none;
+    width: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img2 {
+    margin-left: 10px;
+    text-align: center;
+    align-items: center;
+    width: 1.5rem;
+    color: #dbe2e4;
+    transition: 0.1s;
+    display: block;
+    position: relative;
+  }
+
+  .icons2 {
+    margin-bottom: -5px;
+    display: inline-flex;
+    width: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    text-align: center;
+    font-family: arial;
+    margin-bottom: 0;
+    display: block;
+    padding: 48px;
+
+
+    background-color: #110629;
+    align-items: center;
+    color: white;
+  }
+
+  #fot1 {
+    display: inline-block;
+    font-size: 11px;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    text-align: center;
+  }
+
+  #fot2 {
+    display: inline-block;
+
+    margin-top: 15px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .augusto {
+    text-decoration: none;
+    color: aqua;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #gameOver {
+    position: absolute;
+    font-family: 'Patrick Hand', sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+  }
+
+  #restart {
+    font-family: 'Patrick Hand', sans-serif;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}

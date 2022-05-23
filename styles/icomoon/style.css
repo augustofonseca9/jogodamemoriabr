@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?mzpuef');
+  src:  url('fonts/icomoon.eot?mzpuef#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?mzpuef') format('truetype'),
+    url('fonts/icomoon.woff?mzpuef') format('woff'),
+    url('fonts/icomoon.svg?mzpuef#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-react:before {
+  content: "\e900";
+  color: #61dafb;
+}
+.icon-node-dot-js:before {
+  content: "\e901";
+  color: #393;
+}
+.icon-mongodb:before {
+  content: "\e902";
+  color: #47a248;
+}
+.icon-jquery:before {
+  content: "\e903";
+  color: #0769ad;
+}
+.icon-html5:before {
+  content: "\e904";
+  color: #e34f26;
+}
+.icon-firebase:before {
+  content: "\e905";
+  color: #ffca28;
+}
+.icon-electron:before {
+  content: "\e906";
+  color: #47848f;
+}
+.icon-css3:before {
+  content: "\e907";
+  color: #1572b6;
+}
+.icon-javascript:before {
+  content: "\e908";
+  color: #f7df1e;
+}
+.icon-bootstrap:before {
+  content: "\e909";
+  color: #563d7c;
+}
